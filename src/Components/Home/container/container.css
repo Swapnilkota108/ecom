@@ -1,0 +1,74 @@
+.container{
+    width: 98%;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  .container-image{
+    height: max-content;
+    width: max-content;
+    position: relative;
+  }
+  
+   .container-image button{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    background-color: #fff;
+    color: var(--theme-color);
+    border-radius: 8px;  
+  } 
+
+  .container-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 17rem;
+    width: 15rem;
+    box-shadow: none;
+    line-height: 1.8rem;
+   }
+   
+    .container-card img {
+     border-bottom: none;
+     height: 70%;
+     width: 70%;
+     object-fit:contain;
+   } 
+
+
+  .container-btn-left{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    top: 40%;
+    background-color: #000;
+  }
+  .container-btn-right{
+    position: absolute;
+    right: 0;
+    z-index:2;
+    top: 40%;
+    background-color: #000;
+  
+  }
+  
+  .container-deal{
+    height: 19rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    position: relative;
+  }
+  
+  .deal-contents{
+    position: relative;
+    display: flex;
+    transition: all 0.5s;
+  }
+ 

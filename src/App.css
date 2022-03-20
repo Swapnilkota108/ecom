@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -48,4 +48,123 @@
   color: #d9d9d9;
   font-size: 1.2rem;
   margin: 1rem;
+} */
+
+@import url("https://onlycss.netlify.app/main/main.css");
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC:wght@700&family=Andika&family=Anton&family=Architects+Daughter&family=Balsamiq+Sans&family=Bebas+Neue&family=Bangers&family=Cookie&family=Dancing+Script:wght@600;700&family=Dongle&family=Fjalla+One&family=Indie+Flower&family=Lato&family=Lobster&family=Monoton&family=Niconne&family=Open+Sans:wght@300&family=Oswald&family=Pacifico&family=Playball&family=Prompt&family=Press+Start+2P&family=Roboto:wght@400;500&family=Satisfy&family=Teko:wght@500&display=swap');
+@import url("./Components/Home/container/container.css");
+
+
+*{
+  font-family: "Fjalla One", Sans-Serif;
+    color: var(--default-font-color);
+  --default-font-color:#1e1e1e;
+  --border-color:rgb(159, 156, 156);
 }
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+.App{
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.navbar{
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+  .profile, .wishlist{
+   text-align: center;
+   font-size: 0.7rem;
+  }
+
+
+  .navbar-logo{
+   font-size: 1.7rem;
+   padding: 0 0 0 0.4rem;
+}
+  .fa-box-open{
+    color: black;
+  }
+  .input-search-container{
+    width: 30%;
+    border: 1px solid var(--border-color);
+  }
+
+.list:hover{
+  text-decoration: underline;
+}  
+  
+.img-container{
+  width: 100%;
+}
+
+
+
+.btn-text{
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.btn::before{
+  transition: all 0.3s;
+  content: '';
+  width: 0%;
+  height: 100%;
+  border-radius: 8px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+.btn:hover::before {
+  width: 100%;
+  background-color: #000;
+}
+
+
+
+legend{
+  margin-left: 47%;
+}
+
+
+
+
+.img{
+  margin: 5px;
+  width: 15rem;
+}
+
+
+
+.discounted-text{
+  color: green;
+}
+
+ .img-responsive{
+  height: 24rem;
+} 
+
+
+
+/* footer */
+
+
