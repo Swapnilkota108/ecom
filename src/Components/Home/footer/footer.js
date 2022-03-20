@@ -7,4 +7,4 @@ return <footer className="footer"></footer>
 
 }
 
-export {Footer};
+export { Footer };
