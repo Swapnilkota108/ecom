@@ -1,0 +1,16 @@
+.form{
+    background-color: #fff;
+    
+}
+
+.form-input{
+    background-color: #fff;
+    border:none;
+    border-bottom: 1px solid var(--theme-color);
+    outline: none;
+}
+
+.btn-form{
+    background-color: var(--theme-color);
+    color: #fff
+}

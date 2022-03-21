@@ -4,7 +4,6 @@
     flex-wrap:wrap ;
     justify-content: center;
     align-items: center;
-    text-align: center;
   }
   
   
@@ -59,12 +58,21 @@
   }
   
   .container-deal{
-    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
+    box-shadow: rgba(17, 17, 26, 0.156) 0px 1px 0px, rgba(17, 17, 26, 0.292) 0px 0px 8px;    
     position: relative;
+    text-align: center;
   }
+
+  .container-header{
+    font-size: 1.2rem;
+  }
+
+
   
   .deal-contents{
     position: relative;
@@ -72,3 +80,4 @@
     transition: all 0.5s;
   }
  
+  

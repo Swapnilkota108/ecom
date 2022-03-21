@@ -53,13 +53,20 @@
 @import url("https://onlycss.netlify.app/main/main.css");
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Amatic+SC:wght@700&family=Andika&family=Anton&family=Architects+Daughter&family=Balsamiq+Sans&family=Bebas+Neue&family=Bangers&family=Cookie&family=Dancing+Script:wght@600;700&family=Dongle&family=Fjalla+One&family=Indie+Flower&family=Lato&family=Lobster&family=Monoton&family=Niconne&family=Open+Sans:wght@300&family=Oswald&family=Pacifico&family=Playball&family=Prompt&family=Press+Start+2P&family=Roboto:wght@400;500&family=Satisfy&family=Teko:wght@500&display=swap');
 @import url("./Components/Home/container/container.css");
+@import url("./Components/Home/footer/footer.css");
+@import url("./Components/login/login.css");
+@import url("./Components/giftbox/giftbox.css");
 
+:root{
+  --default-font-color:#1e1b1b;
+  --border-color:#e6e6e6;
+  --theme-color:#121314;
+}
 
 *{
-  font-family: "Fjalla One", Sans-Serif;
-    color: var(--default-font-color);
-  --default-font-color:#1e1e1e;
-  --border-color:rgb(159, 156, 156);
+  font-size: 0.9rem;
+  font-family: "MangoSans",sans-serif;
+  color: var(--default-font-color);
 }
 
 body{
@@ -78,18 +85,21 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
- 
 }
 
 .navbar{
   justify-content: space-between;
   position: sticky;
+  font-weight: 600;
   top: 0;
   background-color: #fff;
+  color: var(--default-font-color);
+  box-shadow:  rgba(17, 17, 26, 0.156) 0px 1px 0px, rgba(17, 17, 26, 0.292) 0px 0px 8px;
 }
-  .profile, .wishlist{
+  .profile{
    text-align: center;
-   font-size: 0.7rem;
+   display: flex;
+   flex-direction: column;
   }
 
 
@@ -97,13 +107,15 @@ html{
    font-size: 1.7rem;
    padding: 0 0 0 0.4rem;
 }
-  .fa-box-open{
-    color: black;
-  }
   .input-search-container{
     width: 30%;
     border: 1px solid var(--border-color);
   }
+
+.list{
+  color: var(--default-font-color);
+  text-decoration: none;
+}
 
 .list:hover{
   text-decoration: underline;
@@ -113,11 +125,16 @@ html{
   width: 100%;
 }
 
-
+.btn{
+  background-color: #fff;
+  color: var(--default-font-color);
+  border: none;
+}
 
 .btn-text{
   color: #fff;
   mix-blend-mode: difference;
+  font-weight: 600;
 }
 
 .btn::before{
@@ -140,10 +157,6 @@ html{
 }
 
 
-
-legend{
-  margin-left: 47%;
-}
 
 
 

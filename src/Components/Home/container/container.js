@@ -23,7 +23,7 @@ function DealProduct(props) {
 
 function ContainerHeader(props) {
     return <h3 className="container-header">
-        {props.text} <i class="fa fa-clock"></i>{" "}
+        {props.text}{" "}
     </h3>
 }
 
@@ -64,16 +64,11 @@ function ContainerDeal() {
     const [showButton, setShowButton] = useState(true);
     const [position, setPosition] = useState(0);
 
-    function leftClick() {
-        setPosition(() => position - 10);
-        console.log(position);
-    }
+    const leftClick = () => setPosition(()=>position!=0 ? position + 10 : position)
 
-    console.log(position);
 
     function rightClick() {
-        setPosition(() => position + 10);
-        console.log(position);
+        setPosition(() => position - 10 );
     }
     return <div className="container-deal container">
         <ContainerHeader text="Best deals" />
