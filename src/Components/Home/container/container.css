@@ -19,8 +19,44 @@
     left: 30%;
     background-color: #fff;
     color: var(--theme-color);
-    border-radius: 8px;  
+    border-radius: 0.2rem;  
   } 
+
+  .img-container{
+    width: 100%;
+    position: relative;
+  }
+  
+  .btn{
+    background-color: #fff;
+    color: var(--default-font-color);
+    border: none;
+  }
+  
+  .btn-text{
+    color: #fff;
+    mix-blend-mode: difference;
+    font-weight: 600;
+  }
+  
+  .container button::before{
+    transition: all 0.3s;
+    content: '';
+    width: 0%;
+    height: 100%;
+    border-radius: 0.2rem;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  
+  .container button:hover::before {
+    width: 100%;
+    background-color: #000;
+  }
 
   .container-card{
     display: flex;
@@ -40,21 +76,21 @@
      object-fit:contain;
    } 
 
+  .container-btn-left, .container-btn-right{
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    background-color: #fff;
+    border-radius: var(--button-radius);
+  } 
+
 
   .container-btn-left{
-    position: absolute;
     left: 0;
-    z-index: 2;
-    top: 40%;
-    background-color: #000;
+   
   }
   .container-btn-right{
-    position: absolute;
     right: 0;
-    z-index:2;
-    top: 40%;
-    background-color: #000;
-  
   }
   
   .container-deal{
@@ -66,15 +102,17 @@
     box-shadow: rgba(17, 17, 26, 0.156) 0px 1px 0px, rgba(17, 17, 26, 0.292) 0px 0px 8px;    
     position: relative;
     text-align: center;
+    margin: 5px;
   }
 
   .container-header{
     font-size: 1.2rem;
+    padding: 0.5rem;
   }
 
 
   
-  .deal-contents{
+  .product-content{
     position: relative;
     display: flex;
     transition: all 0.5s;

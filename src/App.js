@@ -1,18 +1,20 @@
 import "./App.css";
 import { Navbar } from "./Components/Home/navigation";
-import { Image } from "./Components/Home/image";
 import { Footer } from "./Components/Home/footer/footer";
 import { LogIn } from "./Components/login/login";
-import { Container, ContainerDeal } from "./Components/Home/container/container";
+import { Container, ContainerDeal, ProductsContainer, ImageContainer } from "./Components/Home/container/container";
 import { BrowserRouter, Link, Route, Routes, routes } from "react-router-dom";
 import React from "react";
 import { dom } from "@fortawesome/fontawesome-svg-core";
+import { products } from "./backend/db/products";
+import { categories } from "./backend/db/categories";
 
 function Home(){
   return <>  
-      <Image />
+      <ImageContainer />
       <Container />
       <ContainerDeal />
+      <ProductsContainer />
       <Footer/>
   </>
 }
