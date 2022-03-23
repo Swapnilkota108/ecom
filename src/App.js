@@ -26,13 +26,11 @@ function GiftboxSection(){
      <h1>Oops!! It seems like you have not logged in.</h1>
      <LogIn/>
      </div>
-   
 }
 
 
 function App() {
   return (
-  
     <div className="App">
      <Navbar /> 
      <SearchContainer/>

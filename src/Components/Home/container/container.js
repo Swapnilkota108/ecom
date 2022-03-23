@@ -39,7 +39,6 @@ function ImageContainer() {
 
 function ProductDisplay(props) {
     return <div>
-
         <div className="container-card">
             <img className="img" src={props.image} alt="error" />
             <h3>{props.label}</h3>
@@ -114,15 +113,15 @@ function OneCategoryProducts(props) {
         <div className="product-content" style={{
             transform: `translateX(${position}rem)`
         }}>
-           {oneCategoryProducts.map((product) => {
-             return <ProductDisplay {...product} />
-           }
+            {oneCategoryProducts.map((product) => {
+                return <ProductDisplay {...product} />
+            }
             )}
         </div>
     </div>
 }
 
-//Search container
+
 
 
 
