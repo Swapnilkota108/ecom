@@ -2,7 +2,7 @@ import "./App.css";
 import { Navbar, SearchContainer } from "./Components/Home/navigation/navigation";
 import { Footer } from "./Components/Home/footer/footer";
 import { LogIn } from "./Components/login/login";
-import { Container, ContainerDeal, ImageContainer, ProductsContainer } from "./Components/Home/container/container";
+import { Container, ContainerDeal, ImageContainer, OneCategoryProducts } from "./Components/Home/container/container";
 import { BrowserRouter, Link, Route, Routes, routes } from "react-router-dom";
 import React from "react";
 import { dom } from "@fortawesome/fontawesome-svg-core";
@@ -14,7 +14,7 @@ function Home(){
       <ImageContainer />
       <Container />
       <ContainerDeal />
-      <ProductsContainer />
+      <OneCategoryProducts />
       <Footer/>
   </>
 }

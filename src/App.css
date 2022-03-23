@@ -59,11 +59,11 @@ html{
 @media screen and (max-width: 600px){
   .img{
    height: 15rem;
-   width: 11rem;
+   width: 12.07rem;
   }
 
   .img-container img{
-    height: 14rem;
+    height: 16rem;
   }
 
   .navbar-ul{
@@ -81,15 +81,17 @@ html{
     height: 3rem;
   }
   
-  
-
   .container-deal{
     display: block;
   }
 
   .container-card{
     height: 12rem;
-    width: 8rem;
+    width: 10rem;
+  }
+
+  .container-image button{
+    left: 20%;
   }
 } 
 

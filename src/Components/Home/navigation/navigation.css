@@ -34,8 +34,25 @@
   .list{
     color: var(--default-font-color);
     text-decoration: none;
+    position: relative;
   }
   
-  .list:hover{
-    text-decoration: underline;
+ 
+
+  .list::before{
+    content: " ";
+    background-color: #000;
+    height: 0.2rem;
+    width: 0%;
+    display: inline-block;
+    position: absolute;
+    top: 95%;
+    left: -100%;
+    transition: all 0.3s;
+  }
+
+  .list:hover.list::before{
+    transform: translateX(100%);
+    visibility: visible;
+    width: 100%;
   }  
