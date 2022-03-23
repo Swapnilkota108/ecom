@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { categories } from "../../../backend/db/categories";
+import { categories, imageArray } from "../../../backend/db/categories";
 import { products } from "../../../backend/db/products";
+
 
 function ContainerCategory(props) {
     return <div className="container-image">
@@ -17,20 +18,24 @@ function ContainerButton(props) {
 }
 
 function ImageContainer() {
-    function rightClick() {
+    const [index, setIndex] = useState(0);
 
+    function rightClick() {
+      setIndex(()=> index > imageArray.length - 2 ? 0 : index + 1);
+      
     }
 
     function leftClick() {
-
+      setIndex(()=> index == 0 ? imageArray.length - 1 : index - 1);
     }
 
     return <div className="img-container">
-        {/* <img className="img-responsive" src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/WIN_22/BOB/evergreen/traffic/bob_pdp_sobe_hero.jpg" /> */}
         <ContainerButton onLeftClick={leftClick} onRightClick={rightClick} />
-        <img className="img-responsive" src="https://swapnil-tic-tac-toe.netlify.app/2.png"/>
+        <img className="img-responsive" src={imageArray[index]} />
     </div>
 }
+
+
 
 function ProductDisplay(props) {
     return <div>
@@ -57,7 +62,7 @@ function Container() {
     return <div className="container">
         {
             categories.map((product) => {
-                return <ContainerCategory category = {product.categoryName} image = {product.image}/>
+                return <ContainerCategory category={product.categoryName} image={product.image} />
             })
         }
     </div>

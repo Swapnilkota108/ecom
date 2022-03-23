@@ -34,6 +34,8 @@ export const categories = [
 ];
 
 
-export const imageCategories = [
-  
+export const imageArray = [
+"https://skimages.netlify.app/images/bob_pdp_sobe_hero.jpg",
+"https://skimages.netlify.app/images/2.png",
+"https://skimages.netlify.app/images/iphone.PNG"
 ]

@@ -1,30 +1,38 @@
+import {  } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import {SocialMediaIconsReact} from "social-media-icons-react"
 
-function BoldFont(props){
-    return <p className="bold-font">{props.text}</p>
+
+
+function ForwardLinks(props) {
+
+    return <div className="forward-links">
+        <Link to="#">About</Link>
+        <Link to="#">Help</Link>
+        <Link to="#">More</Link>
+
+    </div>
 }
 
-function SocialLinks(props){
+function SocialLinks(props) {
 
-    return <div className="social-links">
-       <>
-       <BoldFont text={props.text}/>
-       </>
-        <p>{props.Link1}</p>
-        <p>{props.Link2}</p>
-        <p>{props.Link3}</p>
-
+    return <div className="forward-links">
+    <SocialMediaIconsReact  borderColor="rgba(0,0,0,0.)" iconSize="1" borderWidth="0" borderStyle="solid" icon="twitter" iconColor="#000" backgroundColor="#fff"   url="https:twitter.com/KotaSwapnil" size="40" />
+    <SocialMediaIconsReact  borderColor="rgba(0,0,0,0.)" iconSize="1" borderWidth="0" borderStyle="solid" icon="github" iconColor="#000" backgroundColor="#fff"   url="https:twitter.com/KotaSwapnil" size="40" />
+    <SocialMediaIconsReact  borderColor="rgba(0,0,0,0.)" iconSize="1" borderWidth="0" borderStyle="solid" icon="linkedin" iconColor="#000" backgroundColor="#fff"   url="https:twitter.com/KotaSwapnil" size="40" />
     </div>
 }
 
 
 
-function Footer(){
- 
+function Footer() {
 
-return <footer className="footer">
-    <SocialLinks text="Connect" Link1="Github" Link2="Twitter" Link3="LinkedIn"/>
-    <SocialLinks text="About" Link1="Queries" Link2="unBox" Link3="more"/>
-</footer>
+
+    return <footer className="footer">
+        <ForwardLinks />
+        <SocialLinks />
+    </footer>
 
 }
 

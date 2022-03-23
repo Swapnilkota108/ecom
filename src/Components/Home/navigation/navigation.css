@@ -1,0 +1,41 @@
+.navbar{
+    justify-content: space-between;
+    position: sticky;
+    font-weight: 600;
+    top: 0;
+    background-color: #fff;
+    color: var(--default-font-color);
+    box-shadow:  rgba(17, 17, 26, 0.156) 0px 1px 0px, rgba(17, 17, 26, 0.292) 0px 0px 8px;
+  }
+    .profile{
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+    }
+    .profile a{
+      font-size: 0.7rem;
+    }
+  
+  
+    .navbar-logo{
+     font-size: 1.7rem;
+     padding: 0 0 0 0.4rem;
+  }
+    .input-search-container{
+      width: 30%;
+      border: 1px solid var(--border-color);
+    }
+
+    .search-container{
+      display: none;
+    }
+  
+  .list{
+    color: var(--default-font-color);
+    text-decoration: none;
+  }
+  
+  .list:hover{
+    text-decoration: underline;
+  }  

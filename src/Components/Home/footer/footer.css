@@ -1,23 +1,33 @@
 .footer{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height:max-content;
-  background-color: var(--theme-color);
-  color: #fff;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
   width: 100%;
   margin-top: 1rem;
   font-size: 0.8rem;
   }
 
-.social-links{
+.forward-links{
   color: #fff;
-  padding: 1rem;
+  padding: 0.2rem;
   line-height: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.forward-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .bold-font{
   font-weight: 600;
   font-size: 1.1rem;
 }
+
