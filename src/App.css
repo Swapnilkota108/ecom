@@ -5,6 +5,7 @@
 @import url("./Components/Home/footer/footer.css");
 @import url("./Components/login/login.css");
 @import url("./Components/giftbox/giftbox.css");
+@import url("./Components/Home/navigation/navigation.css");
 
 :root{
   --default-font-color:#1e1b1b;
@@ -16,7 +17,9 @@
   font-size: 0.9rem;
   font-family: "MangoSans",sans-serif;
   color: var(--default-font-color);
+  box-sizing: border-box;
 }
+
 
 body{
   margin: 0;
@@ -36,55 +39,12 @@ html{
   align-items: center;
 }
 
-.navbar{
-  justify-content: space-between;
-  position: sticky;
-  font-weight: 600;
-  top: 0;
-  background-color: #fff;
-  color: var(--default-font-color);
-  box-shadow:  rgba(17, 17, 26, 0.156) 0px 1px 0px, rgba(17, 17, 26, 0.292) 0px 0px 8px;
+.img-container img{
+ transition: 0.6s ease;
 }
-  .profile{
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   gap: 5px;
-  }
-  .profile a{
-    font-size: 0.7rem;
-  }
-
-
-  .navbar-logo{
-   font-size: 1.7rem;
-   padding: 0 0 0 0.4rem;
-}
-  .input-search-container{
-    width: 30%;
-    border: 1px solid var(--border-color);
-  }
-
-.list{
-  color: var(--default-font-color);
-  text-decoration: none;
-}
-
-.list:hover{
-  text-decoration: underline;
-}  
   
 
 
-
-
-
-
-
-.img{
-  margin: 5px;
-  width: 15rem;
-}
 
 
 
@@ -96,8 +56,44 @@ html{
   height: 24rem;
 }  
 
+@media screen and (max-width: 600px){
+  .img{
+   height: 15rem;
+   width: 12.07rem;
+  }
 
+  .img-container img{
+    height: 16rem;
+  }
 
-/* footer */
+  .navbar-ul{
+    display: none;
+  }
+  .input-search-container{
+    display: none;
+  }
+
+  .search-container, .search-container .input-search-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    height: 3rem;
+  }
+  
+  .container-deal{
+    display: block;
+  }
+
+  .container-card{
+    height: 12rem;
+    width: 10rem;
+  }
+
+  .container-image button{
+    left: 20%;
+  }
+} 
+
 
 

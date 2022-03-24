@@ -12,6 +12,11 @@
     width: max-content;
     position: relative;
   }
+
+  .img{
+    margin: 5px;
+   
+  }
   
    .container-image button{
     position: absolute;
@@ -110,12 +115,9 @@
     padding: 0.5rem;
   }
 
-
-  
   .product-content{
     position: relative;
     display: flex;
     transition: all 0.5s;
   }
  
-  
