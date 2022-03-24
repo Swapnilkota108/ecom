@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Profile(props) {
     return <div className="profile">
-        <FontAwesomeIcon icon={props.icon} size="lg" />
+        <FontAwesomeIcon icon={props.icon} size="md" />
         <Link to={props.link} className="list">{props.text}</Link>
     </div>
 }
@@ -30,15 +30,15 @@ function Navbar() {
             <FontAwesomeIcon icon={faSearch} />
         </div>
         <ul className="navbar-ul">
-            <Link to="/" className="list">HOME</Link>
-            <Link to="/giftbox" className="list">GIFTBOX</Link>
-            <Link to="/more" className="list">MORE</Link>
+            <Link to="/" className="list">Home</Link>
+            <Link to="/giftbox" className="list">Giftbox</Link>
+            <Link to="/more" className="list">More</Link>
 
         </ul>
         <ul className="navbar-ul">
-            <Profile link="/wishlist" text="WISHLIST" icon={faHeart} />
-            <Profile link="/cart" text="CART" icon={faCartShopping} />
-            <Profile link="/profile" text="PROFILE" icon={faUser} />
+            <Profile link="/wishlist" text="Wishlist" icon={faHeart} />
+            <Profile link="/cart" text="Cart" icon={faCartShopping} />
+            <Profile link="/profile" text="Profile" icon={faUser} />
 
         </ul>
     </nav>

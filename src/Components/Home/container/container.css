@@ -44,7 +44,7 @@
     font-weight: 600;
   }
   
-  .container button::before{
+   .container button::before{
     transition: all 0.3s;
     content: '';
     width: 0%;
@@ -55,7 +55,7 @@
     top: 0;
     left: 0;
     z-index: 0;
-  }
+  } 
   
   
   .container button:hover::before {
