@@ -1,48 +1,39 @@
-import "./App.css";
-import { Navbar, SearchContainer } from "./Components/Home/navigation/navigation";
-import { Footer } from "./Components/Home/footer/footer";
-import { LogIn } from "./Components/login/login";
-import { Container, ContainerDeal, ImageContainer, OneCategoryProducts } from "./Components/Home/container/container";
-import { BrowserRouter, Link, Route, Routes, routes } from "react-router-dom";
-import React from "react";
-import { dom } from "@fortawesome/fontawesome-svg-core";
-import { products } from "./backend/db/products";
-import { categories } from "./backend/db/categories";
+import { ProductsPage } from "./Components/products/products";
+import { Navbar, SearchContainer, Footer, LogIn, Container, ContainerDeal, ImageContainer, OneCategoryProducts, React, dom, products, categories, Route, Routes, GiftboxSection } from "./imports"
 
-function Home(){
-  return <>  
-      <ImageContainer />
-      <Container />
-      <ContainerDeal />
-      <OneCategoryProducts />
-      <Footer/>
+
+
+
+function Home() {
+  return <>
+    <ImageContainer />
+    <Container />
+    <ContainerDeal />
+    <OneCategoryProducts />
+
   </>
 }
 
+function PageRoutes() {
 
-
-function GiftboxSection(){
-   return <div className="gifts-section">
-     <h1>Oops!! It seems like you have not logged in.</h1>
-     <LogIn/>
-     </div>
+  return <Routes className="App">
+    <Route path="/" element={<Home />} />
+    <Route path="/giftbox" element={<GiftboxSection />} />
+    <Route path="/products" element={<ProductsPage />} />
+  </Routes>
 }
-
 
 function App() {
   return (
     <div className="App">
-     <Navbar /> 
-     <SearchContainer/>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/giftbox" element={<GiftboxSection/>}/>
-      </Routes>
+      <Navbar />
+      <SearchContainer />
+      <PageRoutes />
+      <Footer />
     </div>
 
   );
 }
-
 
 export default App;
 

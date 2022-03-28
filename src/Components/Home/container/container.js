@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { categories, imageArray } from "../../../backend/db/categories";
 import { ContainerProducts, oneCategoryProducts, products } from "../../../backend/db/products";
 import { Countdown } from "../countdown/countdown";
@@ -20,19 +21,26 @@ function ContainerButton(props) {
 
 function ImageContainer() {
     const [index, setIndex] = useState(2);
+    const [translateX, setTranslateX] = useState(0);
+    const [clicked, setClicked] = useState(false);
 
     function shiftRight() {
         setIndex(() => index > imageArray.length - 2 ? 0 : index + 1);
-
+        setTranslateX(() => 100);
+        setClicked(() => true);
     }
 
     function shiftLeft() {
         setIndex(() => index == 0 ? imageArray.length - 1 : index - 1);
+        setTranslateX(() => 100);
+        setClicked(() => true);
     }
 
     return <div className="img-container">
         <ContainerButton onshiftLeft={shiftLeft} onshiftRight={shiftRight} />
-        <img className="img-responsive" src={imageArray[index]} />
+        <Link to="/products" >
+            <img className="img-responsive" src={imageArray[index]} />
+        </Link>
     </div>
 }
 
@@ -81,7 +89,7 @@ function ContainerDeal() {
 
     return <div className="container-deal container">
         <ContainerHeader text="Best deals" />
-       
+
         {showButton && <ContainerButton onshiftLeft={shiftLeft} onshiftRight={shiftRight} />}
 
         <div className="product-content" style={{

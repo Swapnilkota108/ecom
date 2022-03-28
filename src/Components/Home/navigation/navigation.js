@@ -9,13 +9,13 @@ function Profile(props) {
     </div>
 }
 
-function SearchContainer(){
+function SearchContainer() {
 
     return <div className="search-container">
         <div className="input-search-container">
             <input className="input-search" type="search" placeholder="search" />
             <FontAwesomeIcon icon={faSearch} />
-    </div>
+        </div>
     </div>
 }
 
