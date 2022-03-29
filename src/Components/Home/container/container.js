@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { categories, imageArray } from "../../../backend/db/categories";
 import { ContainerProducts, oneCategoryProducts, products } from "../../../backend/db/products";
+import { Countdown } from "../countdown/countdown";
 
 
 function ContainerCategory(props) {
@@ -13,25 +15,32 @@ function ContainerCategory(props) {
 function ContainerButton(props) {
 
     return <>
-        <button onClick={props.onLeftClick} className="container-btn-left btn-float"><span className="btn-text">❮</span></button>
-        <button onClick={props.onRightClick} className="container-btn-right btn-float"><span className="btn-text">❯</span></button></>
+        <button onClick={props.onshiftLeft} className="container-btn-left btn-float"><span className="btn-text">❮</span></button>
+        <button onClick={props.onshiftRight} className="container-btn-right btn-float"><span className="btn-text">❯</span></button></>
 }
 
 function ImageContainer() {
     const [index, setIndex] = useState(2);
+    const [translateX, setTranslateX] = useState(0);
+    const [clicked, setClicked] = useState(false);
 
-    function rightClick() {
+    function shiftRight() {
         setIndex(() => index > imageArray.length - 2 ? 0 : index + 1);
-
+        setTranslateX(() => 100);
+        setClicked(() => true);
     }
 
-    function leftClick() {
+    function shiftLeft() {
         setIndex(() => index == 0 ? imageArray.length - 1 : index - 1);
+        setTranslateX(() => 100);
+        setClicked(() => true);
     }
 
     return <div className="img-container">
-        <ContainerButton onLeftClick={leftClick} onRightClick={rightClick} />
-        <img className="img-responsive" src={imageArray[index]} />
+        <ContainerButton onshiftLeft={shiftLeft} onshiftRight={shiftRight} />
+        <Link to="/products" >
+            <img className="img-responsive" src={imageArray[index]} />
+        </Link>
     </div>
 }
 
@@ -70,17 +79,18 @@ function ContainerDeal() {
     const [showButton, setShowButton] = useState(true);
     const [position, setPosition] = useState(0);
 
-    function leftClick() {
+    function shiftLeft() {
         setPosition(() => position != 0 ? position + 10 : position);
     }
 
-    function rightClick() {
+    function shiftRight() {
         setPosition(() => position - 10);
     }
 
     return <div className="container-deal container">
         <ContainerHeader text="Best deals" />
-        {showButton && <ContainerButton onLeftClick={leftClick} onRightClick={rightClick} />}
+
+        {showButton && <ContainerButton onshiftLeft={shiftLeft} onshiftRight={shiftRight} />}
 
         <div className="product-content" style={{
             transform: `translateX(${position}rem)`
@@ -99,17 +109,17 @@ function OneCategoryProducts(props) {
     const [position, setPosition] = useState(0);
 
 
-    function leftClick() {
+    function shiftLeft() {
         setPosition(() => position != 0 ? position + 10 : position);
     }
 
-    function rightClick() {
+    function shiftRight() {
         setPosition(() => position - 10);
     }
 
-    return <div className="products-container container-deal container">
+    return <div className="container-deal container">
         <ContainerHeader text="Shoes offer" />
-        {showButton && <ContainerButton onLeftClick={leftClick} onRightClick={rightClick} />}
+        {showButton && <ContainerButton onshiftLeft={shiftLeft} onshiftRight={shiftRight} />}
         <div className="product-content" style={{
             transform: `translateX(${position}rem)`
         }}>

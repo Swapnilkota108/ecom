@@ -44,7 +44,7 @@
     font-weight: 600;
   }
   
-  .container button::before{
+   .container button::before, .container-product .btn::before{
     transition: all 0.3s;
     content: '';
     width: 0%;
@@ -55,10 +55,10 @@
     top: 0;
     left: 0;
     z-index: 0;
-  }
+  } 
   
   
-  .container button:hover::before {
+  .container button:hover::before,  .container-product .btn:hover:before {
     width: 100%;
     background-color: #000;
   }

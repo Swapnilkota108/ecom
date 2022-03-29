@@ -6,9 +6,11 @@
 @import url("./Components/login/login.css");
 @import url("./Components/giftbox/giftbox.css");
 @import url("./Components/Home/navigation/navigation.css");
+@import url("./Components/Home/countdown/coutdown.css");
+@import url("./Components/products/products.css");
 
 :root{
-  --default-font-color:#1e1b1b;
+  --default-font-color:#272727;
   --border-color:#e6e6e6;
   --theme-color:#121314;
 }
@@ -27,9 +29,7 @@ body{
   height: 100vh;
 }
 
-html{
-  scroll-behavior:smooth;
-}
+
 
 .App{
   min-height: 100%;
@@ -43,23 +43,21 @@ html{
  transition: 0.6s ease;
 }
   
-
-
-
-
-
 .discounted-text{
   color: green;
 }
 
   .img-responsive{
   height: 24rem;
+  transition: 1s ease-in;
 }  
+
+
 
 @media screen and (max-width: 600px){
   .img{
    height: 15rem;
-   width: 12.07rem;
+   width: 11.2rem;
   }
 
   .img-container img{
@@ -93,6 +91,8 @@ html{
   .container-image button{
     left: 20%;
   }
+
+  
 } 
 
 
