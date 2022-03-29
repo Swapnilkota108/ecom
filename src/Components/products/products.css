@@ -34,12 +34,10 @@
     padding: 0;
     box-shadow: none;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
+    /* border: 1px solid var(--border-color); */
     margin: 0.4rem;
   }
-  .card-product h1{
-    font-size: 1.3rem;
-  }
+ 
 
   .card-product img {
     border: none;
@@ -50,12 +48,18 @@
     border-radius: 3px;
     height: 2rem;
     width: 2rem;
-    background-color: black;
+    background-color: var(--theme-color);
     color: #fff;
     font-size: 0.7rem;
     font-weight: 700;
     padding: 0;
     margin: 0.4rem 0.4rem;
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+
+  .card-product:hover.card-product .btn{
+   opacity: 1;
   }
 
   .middle-section{
@@ -64,7 +68,7 @@
 
   .product-brand{
     font-size: 1rem;
-    color: red;
+    color: #ff651e;
   }
 
   .card-product .last-section{

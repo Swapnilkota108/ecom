@@ -1,10 +1,8 @@
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
-import { useEffect, useState } from "react/cjs/react.production.min";
-import { products } from "../../backend/db/products";
-
+import { useProductContext } from "../../context/product_context";
 let categoryArray = [" Men", " Women", " Kids"];
-let pricesSort = [" Low to high", " High to Low"];
+let pricesSort = ["Low to high", " High to Low"];
 let deliveryTypes = [" Fast delivery only", " Include out of stock"];
 let rating = [" 5 ★", " 4 ★ and above", " 3 ★ and above", " 2 ★ and above", " 1 ★ and above"];
 
@@ -30,15 +28,15 @@ function CatergoryFilter() {
 function PriceFilter() {
     return <div className="price-filter">
         <h1></h1>
-    
+
     </div>
 }
 
 function PricesSort() {
 
     return <div className="input ul-list">
-        <h1>Price - sort by</h1>
-        {pricesSort.map((type) => <InputCheck type={"radio"} name={"price"} label={type} />)}
+        <h1>Sort by</h1>
+        {pricesSort.map((type) => <InputCheck type={"radio"} name={"price"} label={" Price - "+ type} />)}
     </div>
 }
 
@@ -94,11 +92,15 @@ function Card(props) {
 
 function ProductContainer() {
 
+    const products = useProductContext();
+
+    console.log(products)
 
     return <div className="products-container">
-    {products.map((product)=>
-          <Card label={product.label} image={product.image} brand={product.brand} price={product.price}/>
-        ) }
+        {products.map((product) =>
+            <Card label={product.label} image={product.image} brand={product.brand} price={product.price} />
+        )}
+        <></>
     </div>
 }
 

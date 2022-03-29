@@ -117,7 +117,7 @@ function OneCategoryProducts(props) {
         setPosition(() => position - 10);
     }
 
-    return <div className="products-container container-deal container">
+    return <div className="container-deal container">
         <ContainerHeader text="Shoes offer" />
         {showButton && <ContainerButton onshiftLeft={shiftLeft} onshiftRight={shiftRight} />}
         <div className="product-content" style={{
