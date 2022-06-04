@@ -1,4 +1,4 @@
-import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import { faFilter, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
@@ -67,14 +67,19 @@ function DeliveryFilter() {
 
 function Aside(props) {
 
+    const [asideDisplay, setAsideDisplay] = useState(props.display);
 
-    return <aside className="drawer" style={{display:props.display}}>
+    return <aside className="drawer" style={{ display: props.display }}>
         <h2>Filters</h2>
         <CatergoryFilter />
         <PriceFilter />
         <PricesSort />
         <DeliveryFilter />
         <RatingSort />
+        <div className="close-filter" onClick={() => props.onClick()
+        }>
+            <FontAwesomeIcon icon={faTimes} />
+        </div>
     </aside>
 }
 
@@ -112,14 +117,18 @@ function ProductContainer() {
 
 export function ProductsPage() {
 
-   const [filterDisplay, setFilterDisplay] = useState("");
+    const [filterDisplay, setFilterDisplay] = useState("");
+
+    function closeFilter() {
+        setFilterDisplay("");
+    }
 
 
     return <div className="product-page">
-        <Aside display={filterDisplay} />
+        <Aside display={filterDisplay} onClick={closeFilter} />
         <div className="filter-icon">
 
-            <h2 className="filter" onClick={()=>setFilterDisplay("block")}  >
+            <h2 className="filter" onClick={() => setFilterDisplay("block")}  >
                 <FontAwesomeIcon icon={faFilter} />
                 Filters</h2>
         </div>
