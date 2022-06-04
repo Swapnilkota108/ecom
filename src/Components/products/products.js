@@ -76,6 +76,8 @@ function Aside(props) {
         <PricesSort />
         <DeliveryFilter />
         <RatingSort />
+        <button className="drawer-btn">Apply</button>
+
         <div className="close-filter" onClick={() => props.onClick()
         }>
             <FontAwesomeIcon icon={faTimes} />
