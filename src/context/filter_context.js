@@ -1,11 +1,7 @@
 import { createContext, useReducer } from "react";
 import { useContext } from "react/cjs/react.production.min";
-
 import { useProductContext } from "./product_context";
 
-
-
-const products = useProductContext();
 
 const FilterContext = createContext();
 
@@ -18,9 +14,6 @@ function FilterContextProvider({children}){
         includeOutOfStock,
         rating
     })
-
-
-
 
 
     return <FilterContext.Provider value={[state,dispatch]}>

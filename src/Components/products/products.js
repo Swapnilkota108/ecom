@@ -1,5 +1,8 @@
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
 import { useProductContext } from "../../context/product_context";
 let categoryArray = [" Men", " Women", " Kids"];
 let pricesSort = ["Low to high", " High to Low"];
@@ -36,7 +39,7 @@ function PricesSort() {
 
     return <div className="input ul-list">
         <h1>Sort by</h1>
-        {pricesSort.map((type) => <InputCheck type={"radio"} name={"price"} label={" Price - "+ type} />)}
+        {pricesSort.map((type) => <InputCheck type={"radio"} name={"price"} label={" Price - " + type} />)}
     </div>
 }
 
@@ -62,9 +65,10 @@ function DeliveryFilter() {
 
 
 
-function Aside() {
+function Aside(props) {
 
-    return <aside className="drawer">
+
+    return <aside className="drawer" style={{display:props.display}}>
         <h2>Filters</h2>
         <CatergoryFilter />
         <PriceFilter />
@@ -106,16 +110,19 @@ function ProductContainer() {
 
 
 
-
-
-
-
 export function ProductsPage() {
 
+   const [filterDisplay, setFilterDisplay] = useState("");
 
 
     return <div className="product-page">
-        <Aside />
+        <Aside display={filterDisplay} />
+        <div className="filter-icon">
+
+            <h2 className="filter" onClick={()=>setFilterDisplay("block")}  >
+                <FontAwesomeIcon icon={faFilter} />
+                Filters</h2>
+        </div>
         <ProductContainer />
     </div>
 }
