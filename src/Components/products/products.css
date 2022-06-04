@@ -24,7 +24,9 @@
     position: sticky;
     top: 4rem;
     scrollbar-width: none;
-
+}
+.drawer::-webkit-scrollbar{
+  width: 0;
 }
 
 .ul-list{
@@ -36,11 +38,9 @@
     padding: 0;
     box-shadow: none;
     border-radius: 8px;
-    /* border: 1px solid var(--border-color); */
     margin: 0.4rem;
   }
  
-
   .card-product img {
     border: none;
     object-fit: contain;
