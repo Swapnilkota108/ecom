@@ -35,7 +35,7 @@ function Navbar() {
             <Link to="/more" className="list">More</Link>
 
         </ul>
-        <ul className="navbar-ul">
+        <ul className="navbar-ul navbar-user-ul">
             <Profile link="/wishlist" text="Wishlist" icon={faHeart} />
             <Profile link="/cart" text="Cart" icon={faCartShopping} />
             <Profile link="/profile" text="Profile" icon={faUser} />
