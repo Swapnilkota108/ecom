@@ -1,126 +1,147 @@
-.product-page{
-    display: flex;
-    width: 100%;
-    position: relative;
+.product-page {
+  display: flex;
+  width: 100%;
+  position: relative;
 }
 
-.products-container{
+.products-container {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% - 18rem);
   padding: 0.4rem;
 }
 
-.product-page *{
-    font-size: 1.1rem;
-    line-height: 1.9rem;
-    position: relative;
+.product-page * {
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  position: relative;
 }
 
-.drawer{
-    width: 18rem;
-    height: 100%;
-    padding: 1rem 0 0 2rem;
-    position: sticky;
-    top: 4rem;
-    scrollbar-width: none;
+.drawer {
+  width: 18rem;
+  height: 100%;
+  padding: 1rem 0 0 2rem;
+  position: sticky;
+  top: 4rem;
+  scrollbar-width: none;
 }
-.drawer::-webkit-scrollbar{
+
+.drawer::-webkit-scrollbar {
   width: 0;
 }
 
-.ul-list{
-    border-top:1px solid var(--border-color);
+.ul-list {
+  border-top: 1px solid var(--border-color);
 }
 
 .card-product {
-    width: 16rem;
-    padding: 0;
-    box-shadow: none;
-    border-radius: 8px;
-    margin: 0.4rem;
-  }
- 
-  .card-product img {
-    border: none;
-    object-fit: contain;
-  }
-  .card-product .btn{
-    display:inline;
-    border-radius: 3px;
-    height: 2rem;
-    width: 2rem;
-    background-color: var(--theme-color);
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 0;
-    margin: 0.4rem 0.4rem;
-    opacity: 0;
-    transition: opacity 0.6s;
+  width: 16rem;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 8px;
+  margin: 0.4rem;
+}
+
+.card-product img {
+  border: none;
+  object-fit: contain;
+}
+
+.card-product .btn {
+  display: inline;
+  border-radius: 3px;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--theme-color);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0.4rem 0.4rem;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.card-product:hover.card-product .btn {
+  opacity: 1;
+}
+
+.middle-section {
+  padding-left: 1.2rem;
+}
+
+.product-brand {
+  font-size: 1rem;
+  color: #ff651e;
+}
+
+.card-product .last-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+}
+
+.filter-icon {
+  display: none;
+  width: 100%;
+  padding: 0.8rem 0 0 2rem;
+}
+
+.filter {
+  width: max-content;
+  padding: 0.4rem 1rem;
+  background-color: var(--theme-color);
+  gap: 10px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.fa-filter path {
+  color: #fff;
+}
+
+.fa-filter {
+  margin-right: 6px;
+}
+.close-filter{
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
+@media screen and (max-width:600px) {
+  .drawer {
+    display: none;
+    width: 90%;
+
   }
 
-  .card-product:hover.card-product .btn{
-   opacity: 1;
+  .products-container {
+    width: 100%;
   }
 
-  .middle-section{
-    padding-left: 1.2rem;
+  .card-product {
+    width: 46%;
   }
 
-  .product-brand{
-    font-size: 1rem;
-    color: #ff651e;
+  .btn {
+    min-width: 5rem;
   }
 
-  .card-product .last-section{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding: 0;
+  .close-filter{
+    display: block;
   }
 
-  .filter-icon{
-     display: none;
-     width: 100%;
-     padding: 0.8rem 0 0 2rem;
-  }
-  .filter{
-    width: max-content;
-    padding: 0.4rem 1rem;
-    background-color: var(--theme-color);
-    gap: 10px;
-    color: #fff;
-    border-radius: 4px;
-  }
-  .fa-filter path{
-   color: #fff;
-  }
-  .fa-filter{
-    margin-right: 6px;
+  .filter-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  @media screen and (max-width:600px) {
-   .drawer{
-     display: none;
-     width: 90%;
-     
-   }
-   .products-container{
-     width: 100%;
-   }
-   .card-product{
-     width: 46%;
-   }
-   .btn{
-     min-width: 5rem;
-   }
-   .filter-icon{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-   }
-   .product-page{
-     flex-direction: column;
-   }
+  .product-page {
+    flex-direction: column;
   }
+}
