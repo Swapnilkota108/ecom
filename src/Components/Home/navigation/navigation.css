@@ -37,8 +37,6 @@
     position: relative;
   }
   
- 
-
   .list::before{
     content: " ";
     background-color: #000;

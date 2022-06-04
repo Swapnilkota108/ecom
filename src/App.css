@@ -67,6 +67,12 @@ body{
   .navbar-ul{
     display: none;
   }
+
+  .navbar-user-ul{
+    display: flex;
+  }
+
+ 
   .input-search-container{
     display: none;
   }
