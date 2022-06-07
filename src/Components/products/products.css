@@ -37,16 +37,18 @@
 }
 
 .card-product {
-  width: 16rem;
-  padding: 0;
+  width: 19%;
+  min-width: 15rem;
   box-shadow: none;
-  border-radius: 8px;
+  height: auto;
   margin: 0.4rem;
+  border: 1px solid var(--border-color);
 }
 
 .card-product img {
   border: none;
   object-fit: contain;
+  padding: 1rem;
 }
 
 .card-product .btn {
@@ -77,11 +79,11 @@
   color: #ff651e;
 }
 
-.card-product .last-section {
+.last-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0;
+  padding:0.5rem;
 }
 
 .filter-icon {
@@ -138,7 +140,7 @@
   }
 
   .card-product {
-    width: 46%;
+    min-width: 46.5%;
   }
 
   .btn {
