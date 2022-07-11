@@ -5,7 +5,9 @@ import { v4 as uuid } from "uuid";
  * You can add products of your wish with different attributes
  * */
 
-export const products = [
+
+
+ export const products = [
   {
     _id: 1,
     label: "Ipad mini (6th gen)",
@@ -141,6 +143,7 @@ export const products = [
     image: "https://olianto.com/wp-content/uploads/2019/05/DSC08412.jpg"
   }
 ];
+
 
 
 export const ContainerProducts = [

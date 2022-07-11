@@ -2,7 +2,7 @@ import { faFilter, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useProductContext } from "../../context/product_context";
 let categoryArray = [" Men", " Women", " Kids"];
 let pricesSort = ["Low to high", " High to Low"];
@@ -16,8 +16,6 @@ function InputCheck(props) {
         <label>{props.label}</label>
     </div>
 }
-
-
 
 function CatergoryFilter() {
 
@@ -43,7 +41,6 @@ function PricesSort() {
     </div>
 }
 
-
 function RatingSort() {
 
     return <div className="rating-sort ul-list">
@@ -60,10 +57,6 @@ function DeliveryFilter() {
         {deliveryTypes.map((type) => <InputCheck type={"checkbox"} label={type} />)}
     </div>
 }
-
-
-
-
 
 function Aside(props) {
 
@@ -104,8 +97,7 @@ function Card(props) {
 function ProductContainer() {
 
     const products = useProductContext();
-
-    console.log(products)
+  
 
     return <div className="products-container">
         {products.map((product) =>
